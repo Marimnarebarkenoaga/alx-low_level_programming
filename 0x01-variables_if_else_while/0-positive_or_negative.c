@@ -1,29 +1,25 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
 
-main() {
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	int n;
 
-   int a = 21;
-   int b = 10;
-   int c ;
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
 
-   c = a + b;
-   printf("Line 1 - Value of c is %d\n", c );
-	
-   c = a - b;
-   printf("Line 2 - Value of c is %d\n", c );
-	
-   c = a * b;
-   printf("Line 3 - Value of c is %d\n", c );
-	
-   c = a / b;
-   printf("Line 4 - Value of c is %d\n", c );
-	
-   c = a % b;
-   printf("Line 5 - Value of c is %d\n", c );
-	
-   c = a++; 
-   printf("Line 6 - Value of c is %d\n", c );
-	
-   c = a--; 
-   printf("Line 7 - Value of c is %d\n", c );
+	if (n == 0)
+		printf("%d is zero\n", n);
+	else if (n < 0)
+		printf("%d is negative\n", n);
+	else
+		printf("%d is positive\n", n);
+
+	return (0);
 }
