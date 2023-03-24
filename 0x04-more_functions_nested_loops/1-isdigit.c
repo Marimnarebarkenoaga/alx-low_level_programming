@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _isupper - Checks for uppercase characters
+ * _isdigit - Checks for uppercase characters
  *
  * @c: Number to be checked
  *
