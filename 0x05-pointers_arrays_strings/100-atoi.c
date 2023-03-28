@@ -1,15 +1,29 @@
 #include "main.h"
 
 /**
- * reset_to_98 - Directs a pointer to an int and changes
- * and changes the value to 98.
+ * _atoi - convert a number in a string to an integer
  *
- * @n: The variable pointing to the integer
+ * @s: String to be converted
  *
- * Return: Nothing
+ * Return: converted integer OR 0 if none
  */
 
-void reset_to_98(int *n)
+int _atoi(char *s)
 {
-	*n = 98;
+	int sign_cache = 1;
+	int result = 0;
+
+	while (s[0] != '\0')
+	{
+		if (s[0] == '-')
+			sign_cache *= -1;
+		else if (s[0] >= '0' && s[0] <= '9')
+			result = (result * 10) + (s[0] - '0') * sign_cache;
+		else if (result)
+			break;
+
+		s++;
+	}
+
+	return (result);
 }
